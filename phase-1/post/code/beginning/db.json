@@ -1,0 +1,64 @@
+{
+  "genres": [
+    {
+      "id": 1,
+      "name": "Rock",
+      "popularity": 5
+    },
+    {
+      "id": 2,
+      "name": "Country",
+      "popularity": 3.5
+    },
+    {
+      "id": 3,
+      "name": "Electronic",
+      "popularity": 4
+    },
+    {
+      "id": "1a05",
+      "name": "",
+      "popularity": ""
+    },
+    {
+      "id": "cb06",
+      "name": "",
+      "popularity": ""
+    },
+    {
+      "id": "5f1c",
+      "name": "",
+      "popularity": ""
+    },
+    {
+      "id": "242f",
+      "name": "Jazz",
+      "popularity": "4"
+    },
+    {
+      "id": "f117",
+      "name": "",
+      "popularity": ""
+    },
+    {
+      "id": "3d9e",
+      "name": "Jazz",
+      "popularity": "4444"
+    },
+    {
+      "id": "a56c",
+      "name": "Jazz",
+      "popularity": "4"
+    }
+  ],
+  "instruments": [
+    {
+      "id": 1,
+      "name": "Trumpet"
+    },
+    {
+      "id": 2,
+      "name": "Harmonica"
+    }
+  ]
+}

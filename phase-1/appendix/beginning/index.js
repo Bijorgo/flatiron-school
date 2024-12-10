@@ -37,14 +37,25 @@ Takeaways
 // Big O describes this "goodness" as a factor of n, the algorithm's input size.
 // Common big O descriptions include:
 // - O(1): **constant** speed or memory
+   //this algorithm has a time or space complexity of O(1)
+         // ie. this algorithm stays constant in time/space complexity as input grows
+         //pretty rare, but possible
 // - O(log n): **logarithmic** speed or memory
+   //as input size grows, complexity grows, but not quite as fast as rate of input growth
 // - O(n): **linear** speed or memory
+   //as input size grows, complexity(time/space(for all these examples)) grows at same rate(think x=y)
 // - O(n^2): **quadratic** speed or memory
+   //as input grows, complexity inscreases more quickly-
 // - O(n^2), O(n^3), etc.: **exponential** speed or memory
+   //as input grows, algorithm gets worse as an exponential rate 
+
+// explore above by creating function with array input whre function needs to look at entire array. Increase/decrease size of array and see what happens to time complexity
 
 // ~ Immediate Invocation
 console.log("~~IMMEDIATE INVOCATION~~");
 // We can immediately invoke functions upon declaration with (definition)(arguments).
+   //pretty rare use 
+   //cant call this function again later, a callback function might be more relevant 
 
 // ~ Context
 console.log("~~CONTEXT~~");
@@ -56,10 +67,10 @@ console.log("~~CONTEXT~~");
 //    executes `function` with an object reference and list of arguments.
 // -> function.bind(this, ...arguments);
 //    returns a function with an object reference and array of arguments.
+   // look@ end file
 
-
-// ~ Advanced Array Methods
-console.log("~~ADVANCED ARRAY METHODS~~");
+// ~ Advanced Array Methods-----
+console.log("~~ADVANCED ARRAY METHODS~~");// look@ end file
 // `forEach` isn't the only array method out there. Let's learn about a few more!
 // Hint: For the purposes of Phase 2, `filter` and `map` are most relevant.
 // -> array.find() returns the first element that satisfies some condition.

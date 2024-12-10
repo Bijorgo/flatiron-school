@@ -10,3 +10,54 @@
   3. Link this file to `index.js`, so that the browser loads that file **after** loading the <body>.
   (Bonus 1) Link this file to `styles.css`, and apply some styles to elements on this page. 
 -->
+
+<!-- Notes: -->
+  <!-- This is a comment -->
+  <!-- shortcut for comment is ctrl+/ -->
+  <!-- **void** tag <![information]> like DOCTYPE does not require a closing tag -->
+  <!-- syntax for tags <> opening </> closing-->
+  <!-- opening tag, tag name, attribute-->
+  <!-- resources: MDN (complete and up to date options), W3Schools (focused more on ease of understanding but less complete) to look up tag names and syntax -->
+  <!-- open in live server, in browser localhost: port#-->
+
+  <!-- Below: This is a preamble- tells browser to read file as HTML document -->
+  <!DOCTYPE html>
+
+  <!-- below: not a void tag b/c more info than can be contained in small tag, has an opening and closing tag -->
+  <html lang="en">
+      <!-- anything relevant to nearest opening and closing tags goes here -->
+       <head>
+        <title> An Introduction to HTML.</title>
+          <!-- Shows up in tab title as well as other places determined by the browser -->
+        <script defer src="./index.js"></script>
+        <!--abolve links index.js file to index.html, remember src means source-->
+        <!-- you can do absolute or relative path for local source, relative is more developer friendly b/c absolute path will break when shared with another machine-->
+        <!-- . means directory you're currently in, / means folder index.js -this is a relative path-->
+        <!-- if you were pulling from ex. end folder: "../end/index.js" ".."means go up one folder then use path-->
+        <!-- "../../finishPath" is an extension from above: goes two folders up before starting written path-->
+        <!-- "defer" keyword tells browser to load and read .js file only after all HTML hs been parsed-->
+      </head>
+        <!-- head tag contains all information NOT visible on the page, AKA metadata -->
+        <!-- body tag contains all information visible on the page-->
+       <body>
+        <header>
+          <!-- This shows up in page header as opposed to <title> in <head> -->
+          <h1>An Introduction to HTML!</h1>
+          <h2>Ingeborg Adolfs</h2>
+            <!-- <style attribute="information"></closingSpanTag> -->
+            <!-- <h2> and all higher #s show up smaller and smaller, up to the browser to do, lower numbers are read as more important to browsers -->
+            <!-- can be increasingly important for acessability, screen reading, etc-->
+            <!-- many tags do similar things, but it's good to be specific to impart meaning and style considerations to broswer -->
+          <p>Some <span style="color:blueviolet;">styled</span> text.</p>
+            <!-- <span> allows you to style within HTML. use it minimally and keep styling to CSS-->
+        </header>
+        
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2FuNm51cmpicXdmN2RhMjFxdDFla2NtaHlkbm5jNW50NWVnY3RlaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3CaXVSTqmtCLe/giphy.webp">
+          <!-- image tag, src is source (a required atirbute) "link goes here"-->
+        <hr>
+          <!-- thematic break, creates line/space (you can style it) useful for changes in theme-->
+        <button type="button">Click here!</button>
+          <!-- creates clickable button-->
+       </body>
+  </html>
+  <!-- closing tags, no content here b/c we have closed our html tag -->

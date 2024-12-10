@@ -21,6 +21,7 @@ Takeaways
 
 <html lang="en">
   <head>
+    <!-- ogp.me has info on <meta> tags you may find useful -->
     <meta lang="en" />
     <script defer src="./index.js"></script> 
   </head>
@@ -34,6 +35,23 @@ Takeaways
       <p id="forever">Forever?</p>
       <p id="sometime"></p>
     </div>
+    <div id="form-and-response">
     <!-- form, label, input, submit -->
+    <!-- since we want the user to see a form on load, it is part of our static content and therefore needs to be written in HTML-->
+    <h2>Tell us about your favorite things!</h2>
+    <form>
+      <label>Favorite Food
+        <input name="favorite-food" type="text">
+        <!-- there are lots of different kinds of inputs in forms-->
+        <!-- name attribute is not required but good practice-->
+      </label>
+      <br/><br/> <!-- br is a void tag that doesnt need an end tag, technically doesnt need / @ end but some do-->
+      <label>Favorite Beverage
+        <input name="favorite-beverage" type="text">
+      </label>
+      <br/><br/>
+      <input type="submit"> <!--NOT equivalent to creating a button with submit text-->
+    </form>
+    </div>
   </body>
 </html>

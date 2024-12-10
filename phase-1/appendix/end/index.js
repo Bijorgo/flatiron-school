@@ -49,6 +49,7 @@ console.log("~~IMMEDIATE INVOCATION~~");
 // i.e. subtract(10, 3); if we had defined `subtract`
 
 // ~ Context
+   // context is an object you can attach to a function at a later time
 console.log("~~CONTEXT~~");
 // -> A function's **context** is an object it can access with the keyword `this`.
 function greet(end) { console.log("Hi, " + this.name + end); }
@@ -74,7 +75,14 @@ const prices = [ 100, 30, 200 ];
 // The line below runs something like the following:
 // 1. Run `price => price > 50` where `price` is the first element of `prices`, 100.
 // 2. Since Step 1 returns `true`, the function stops and returns the associated price, 100.
-console.log(prices.find(price => price > 50)); // 100
+// function must return a boolean
+//we aren't actually defining "price", we are using numbers.find to do that
+const greaterThanFifty = prices.find(price => price > 50); // 100
+console.log(greaterThanFifty)
+
+
+
+
 // -> array.reduce() accumulates a value by applying a function to each element in an array.
 // For example, here we find the sum of `prices` by remembering the sum so far (the **accumulator**),
 //     and for each element, we add that new element to the accumulator.
@@ -85,7 +93,14 @@ console.log(prices.find(price => price > 50)); // 100
 // 2. (100, 30) => 100 + 30 = 130. sumSoFar is now 130.
 // 3. (130, 200) => 130 + 200 = 330. sumSoFar is now 330.
 // 4. Return the last value of sumSoFar, i.e. 330.
-console.log(prices.reduce((sumSoFar, current) => sumSoFar + current)); // 330
+const sum = prices.reduce((accumulator, element) => {return accumulator + element}); // 330
+console.log(sum);
+      //Array.reduce(accumulator, currentElement) => {}
+      // accumulator can be named anything, the function takes care of what it's doing
+      //element is the same, it is referring to the elements in the array, but can be named anything
+      //
+
+
 // -> array.filter() returns an array with only the elements that satisfy some condition.
 // The line below runs something like the following:
 // 1. Create an empty array [].
@@ -95,6 +110,10 @@ console.log(prices.reduce((sumSoFar, current) => sumSoFar + current)); // 330
 // 5. Run Steps 2 and 3 where `price` is the third element, resulting in [100, 200].
 // 6. Since there are no elements, return the array [100, 200].
 console.log(prices.filter(price => price > 50)); // [100, 200]
+   // is like find, but find = find 1, filter = find all
+   // does not modify original array
+
+
 // -> array.map() returns an array where each element has been transformed in some specified way.
 // The line below runs something like the following:
 // 1. Create an empty array [].
@@ -104,6 +123,7 @@ console.log(prices.filter(price => price > 50)); // [100, 200]
 // 5. Run Steps 2 and 3 where `price` is the third element, resulting in [200, 60, 400].
 // 6. Since there are no elements, return the array [200, 60, 400].
 console.log(prices.map(price => price * 2)); // [200, 60, 400]
+   // does not modify the original array
 
 
 // ~ Challenges
