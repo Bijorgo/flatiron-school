@@ -5,6 +5,7 @@ class Pasta:
     # The **class attribute** `all_pastas` is shared
     # amongst all instances of `Pasta`.
     all_pastas = []
+    all_origins = []
 
     # By convention, we can use `ALL_CAPS` to name
     # class attributes that are meant to be constant.
@@ -24,6 +25,7 @@ class Pasta:
             raise ValueError("Malformed length given.")
         self.origin = origin
         Pasta.all_pastas.append(self)
+        Pasta.all_origins.append(self.origin)
 
     def __repr__(self) -> str:
         return f"{self.type}"
@@ -42,6 +44,7 @@ class Pasta:
     def most_prolific_region(cls):
         """Returns the most frequently observed
            `origin` amongst all instances of `Pasta`."""
+        #create a dictionary 
         origin_frequencies = {}
         for pasta in cls.all_pastas:
             if pasta.origin not in origin_frequencies:
@@ -49,3 +52,8 @@ class Pasta:
             else:
                 origin_frequencies[pasta.origin] += 1
         return max(origin_frequencies, key=origin_frequencies.get)
+            #maxis a built in method that finds max value
+            # max(something_you_can_iterate_over, optional_name=key)
+            # iterate over each key in origin_frequencies and find the 
+            #maximum value amongst all the keys
+            #.get is built in method to get value of the key, dictionary method

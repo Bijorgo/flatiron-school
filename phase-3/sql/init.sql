@@ -53,7 +53,7 @@ CREATE TABLE garage(
     -- We can use the keyword `DEFAULT` to provide a default value for
     -- a column. Here, `unixepoch()` is used to populate new cells in
     -- `created_at` with the number of seconds elapsed since 1970.
-    created_at INTEGER DEFAULT (unixepoch()),
+    --created_at INTEGER DEFAULT (unixepoch()),
     -- We can use the keywords `NOT NULL` to specify that a column
     -- shouldn't contain any `NULL` (i.e. empty) values.
     name TEXT NOT NULL,
@@ -75,7 +75,7 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE car(
     id INTEGER PRIMARY KEY,
     garage_id INTEGER,
-    created_at INTEGER DEFAULT (unixepoch()),
+    --created_at INTEGER DEFAULT (unixepoch()),
     make TEXT,
     FOREIGN KEY (garage_id) REFERENCES garage(id)
 );

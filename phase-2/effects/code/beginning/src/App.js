@@ -10,11 +10,22 @@
   2. Implement a button that, when clicked, loads the articles hosted with JSON Server.
   3. Load the hosted articles on mount (as a result of <App />'s first render).
 
+  This was the static load data
+  const articles = [ { id: 0, title: "Why I Fetch Data", author: "Max the Beagle" } ];
 */
 
-export default function App() {
-  const articles = [ { id: 0, title: "Why I Fetch Data", author: "Max the Beagle" } ];
+import { useState, useEffect } from "react";
 
+export default function App() {
+  const [ articles, setArticles ] = useState([{ id: 0, title: "", author: "" }])
+  useEffect( () => {
+    fetch("http://localhost:3001/articles")
+  .then(response => response.json())
+  .then(articleData => {
+    setArticles(articleData)
+    })
+  .catch(error => console.error(error))
+  }, [] )
   return (
     <div style={{ minHeight: "100vh",
                   display: "flex", flexDirection: "column",

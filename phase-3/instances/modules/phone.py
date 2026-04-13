@@ -24,6 +24,10 @@ class Phone:
         # An **attribute reference** associates an object with
         # either some bit of data or a **method**.
         # Here, we associate instances of `Phone` with four **data attributes**.
+
+        #in line 38, in index.py, the line below says to 
+        #take `iphone` and add a data attribute to it called `manufacturer`
+        # and it sets its value to the value of the passde argument `manufactuerer` == "Apple"
         self.manufacturer = manufacturer
         self.family = family
         self.model = model

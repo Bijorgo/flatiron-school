@@ -10,8 +10,8 @@
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_serializer import SerializerMixin
-from sqlalchemy.orm import validates
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy.orm import validates #python / app level validations
+from sqlalchemy.exc import IntegrityError #SQL / databases level validations
 from flask_migrate import Migrate
 
 app = Flask(__name__)

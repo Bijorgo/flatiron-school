@@ -22,6 +22,7 @@
 #    or run a script in the environment with `pipenv run python [file].py`.
 
 # import regex
+from rich import print
 
 # It's a good idea to keep classes, functions, and "constants"
 # separate from your CLI's main instructions.
